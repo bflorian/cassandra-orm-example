@@ -41,11 +41,6 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.7.1"
         runtime ":resources:1.1.6"
-
-		compile (":cassandra-astyanax:0.1.0") {
-			excludes 'slf4j-log4j12'
-		}
-		compile ":cassandra-orm:0.0.20"
 		
 		// Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
@@ -55,3 +50,5 @@ grails.project.dependency.resolution = {
         build ":tomcat:$grailsVersion"
     }
 }
+grails.plugin.location.'cassandra-astyanax' = "../cassandra-astyanax"
+grails.plugin.location.'cassandra-orm' = "../cassandra-orm"
