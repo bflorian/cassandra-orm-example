@@ -1,0 +1,60 @@
+create keyspace OrmExample;
+use OrmExample;
+
+create column family User
+    with comparator=UTF8Type
+    and default_validation_class=UTF8Type
+    and column_metadata=[
+        {column_name: gender, validation_class: UTF8Type, index_type: KEYS},
+        {column_name: country, validation_class: UTF8Type, index_type: KEYS},
+        {column_name: state, validation_class: UTF8Type, index_type: KEYS}
+    ];
+
+create column family User_IDX
+    with comparator=UTF8Type
+    and default_validation_class=UTF8Type;
+
+create column family User_CTR
+    with comparator = UTF8Type
+    and default_validation_class = CounterColumnType;
+
+
+create column family Post
+    with comparator=UTF8Type
+    and default_validation_class=UTF8Type;
+
+create column family Post_IDX
+    with comparator=UTF8Type
+    and default_validation_class=UTF8Type;
+
+create column family Post_CTR
+    with comparator = UTF8Type
+    and default_validation_class = CounterColumnType;
+
+
+create column family Comment
+    with comparator=UTF8Type
+    and default_validation_class=UTF8Type;
+
+create column family Comment_IDX
+    with comparator=UTF8Type
+    and default_validation_class=UTF8Type;
+
+create column family Comment_CTR
+    with comparator = UTF8Type
+    and default_validation_class = CounterColumnType;
+
+
+create column family View
+    with comparator=UTF8Type
+    and default_validation_class=UTF8Type;
+
+create column family View_IDX
+    with comparator=UTF8Type
+    and default_validation_class=UTF8Type;
+
+create column family View_CTR
+    with comparator = UTF8Type
+    and default_validation_class = CounterColumnType;
+
+

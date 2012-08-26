@@ -1,0 +1,6 @@
+.idea/
+*.iml
+.settings/
+.DS_Store
+stacktrace.log
+target/
